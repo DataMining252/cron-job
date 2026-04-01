@@ -22,7 +22,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run ETL
-        run: python etl_gold.py
+        run: python job_gold.py
         env:
           DB_URL: ${{ secrets.DB_URL }}
           TWELVE_API_KEY: ${{ secrets.TWELVE_API_KEY }}
