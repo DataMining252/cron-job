@@ -89,7 +89,7 @@ def fetch_fred(series):
 def insert_gold(date_id, g):
     cursor.execute("""
         INSERT INTO predict_gold_price.gold_price
-        (date_id, open, high, low, close, volume)
+        (date_id, open, high, low, close)
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (date_id) DO NOTHING;
     """, (
@@ -98,7 +98,6 @@ def insert_gold(date_id, g):
         g["high"],
         g["low"],
         g["close"],
-        g["volume"]
     ))
 
 # ======================
