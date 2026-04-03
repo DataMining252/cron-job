@@ -60,7 +60,6 @@ def fetch_gold():
         "high": float(d["high"]),
         "low": float(d["low"]),
         "close": float(d["close"]),
-        "volume": int(d["volume"])
     }
 
 # ======================
